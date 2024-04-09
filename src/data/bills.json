@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Muzza",
+    "price": 8.99
+  },
+  {
+    "id": 2,
+    "name": "Harina",
+    "price": 9.99
+  },
+  {
+    "id": 3,
+    "name": "Salsa",
+    "price": 10.99
+  }
+]

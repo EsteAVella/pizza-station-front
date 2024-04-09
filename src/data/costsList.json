@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "muzzarella", "cost": 4.5 },
+  { "id": 2, "name": "caja", "cost": 100 },
+  { "id": 3, "name": "masa", "cost": 2 },
+  { "id": 4, "name": "salsa", "cost": 1 },
+  { "id": 5, "name": "aceitunas", "cost": 10 }
+]

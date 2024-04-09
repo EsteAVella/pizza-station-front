@@ -1,0 +1,30 @@
+[
+  {
+    "producto": 1,
+    "nombre": "Pizza Muzza",
+    "precio": 4.5,
+    "ingredients": [
+      {
+        "name": "muzzarella",
+        "amount": 250
+      },
+      {
+        "name": "caja",
+        "amount": 1
+      },
+      {
+        "name": "masa",
+        "amount": 435
+      },
+      {
+        "name": "aceituna",
+        "amount": 5
+      },
+      {
+        "name": "salsa",
+        "amount": 30
+      }
+    ],
+    "totalCost": -1
+  }
+]
