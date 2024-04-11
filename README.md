@@ -31,3 +31,4 @@ export default {
 
 :::::::::::::COMANDS::::::::::::::::::
 npm run dev
+gi

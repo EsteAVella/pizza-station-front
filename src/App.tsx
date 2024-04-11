@@ -5,8 +5,8 @@ import Pizzas from "./data/pizzas.json";
 function App() {
   return (
     <>
-      <div className=" p-7 min-w-96 justify-center">
-        <h1 className="font-bold text-5xl mb-7 aling">Pizza Station</h1>
+      <div className=" p-7 min-w-96 justify-center bg-yellow-300 ">
+        <h1 className="font-bold text-5xl mb-7 aling ">Pizza Station</h1>
         <h2 className="font-bold text-5xl p-8">LISTA DE PIZZAS</h2>
         <ol>
           {Pizzas.map((pizza, index) => (
@@ -16,12 +16,15 @@ function App() {
           ))}
         </ol>
         <Bills />
-        <h2 className="font-bold text-5xl p-8">CALUCULADORA DE Costos</h2>
+        <h2 className="font-bold text-5xl p-8">Calculadora de costos</h2>
         <Costs />
-        <h2 className="font-bold text-5xl p-8">VENTA</h2>
-        <button className="bg-indigo-500 rounded-2xl p-2"> Nuevo Pedido</button>
-        <h2 className="font-bold text-5xl p-8">RESUMEN</h2>
+        <h2 className="font-bold text-5xl p-8">Ventas</h2>
+        <button className="bg-red-500 rounded-2xl p-2 mt-2">
+          Nuevo Pedido
+        </button>
+        <h2 className="font-bold text-5xl p-8">Resumen</h2>
       </div>
+      //// precio sugerido/////
     </>
   );
 }

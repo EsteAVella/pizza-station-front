@@ -19,7 +19,7 @@ const Bills: React.FC = () => {
 
       <form onSubmit={submitBill}>
         <input
-          className="bg-red-200"
+          className="bg-red-200 p-2 rounded"
           type="text"
           name="name"
           placeholder="ingrese el nombre"
@@ -30,14 +30,13 @@ const Bills: React.FC = () => {
           type="number"
           name="price"
           value={formData.price}
-          className="bg-green-200 p-2 rounded"
+          className="bg-red-200 p-2 rounded "
           onChange={handleInputChange}
         />
-        <button className="bg-indigo-500 rounded p-2 ml-2 mb-7" type="submit">
+        <button className="bg-red-500 rounded-2xl p-2 mt-2" type="submit">
           Add
         </button>
       </form>
-      <span> FALTA Lista de Gastos</span>
     </>
   );
 };
