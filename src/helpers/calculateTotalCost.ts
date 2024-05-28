@@ -1,5 +1,5 @@
 import { Product } from "../interface/product";
-import costList from "../data/costsList.json";
+import costList from "../models/data/costsList.json";
 
 export const calculateTotalCost = (product: Product): number => {
   let totalCost = 0;

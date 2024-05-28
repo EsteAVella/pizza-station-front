@@ -1,48 +1,69 @@
-import Pizzas from "../data/pizzas.json";
+import Pizzas from "../models/data/pizzas.json";
 import { calculateTotalCost } from "../helpers/calculateTotalCost";
-import CostsList from "../data/costsList.json";
+import CostsList from "../models/data/costsList.json";
 
-// UNA PIZA DE MUZZA QUE TIENE > Muzza > Caja > Masa > Oregano > Aceituna
 const Costs = () => {
   const value = calculateTotalCost(Pizzas[0]);
 
   return (
-    <>
-      <span className="text-3xl font-bold p-3">Lista Gastos x Unidad</span>
-      <div className="bg-yellow-200 columns-2 max-w-96 p-1 border-solid border-2 border-red-500 font-bold pl-2 mt-3">
-        <p>M.P</p>
-        <p>Cost P.U</p>
-      </div>
-      <ul>
-        {CostsList.map((p) => (
-          <div className="bg-yellow-200 columns-2 max-w-96 p-1 border-solid border-2 border-red-500">
-            <li className="ml-4 font-thin ">{p.name}</li>
-            <li className="ml-4 font-thin">${p.cost}</li>
-          </div>
-        ))}
-      </ul>
-      <button className="bg-red-500 rounded-2xl p-2 m-3"> Add Cost</button>
-      {/* ACA TERMINA EL COMPONENTE DE LISTA DE GASTOS */}
-      <h2 className="font-bold text-3xl">Ingredientes</h2>
-      <h1>soy una muzza por ahora Pero hay un seleccionador aca</h1>
-      <div className="bg-yellow-200 columns-2 max-w-96 p-1 border-solid border-2 border-red-500 font-bold pl-2">
-        <p>Ingredient</p>
-        <p>Amount</p>
-      </div>
-      <ul>
-        {Pizzas[0].ingredients?.map((p) => (
-          <div className="bg-yellow-200 columns-2 max-w-96 p-1 border-solid border-2 border-red-500">
-            <li className="ml-4 font-thin ">{p.name}</li>
-            <li className="ml-4 font-thin">{p.amount}.u</li>
-          </div>
-        ))}
-      </ul>
-      <span className="font-semibold block ml-3 p-1">
-        COSTO TOTAL: ${value}
+    <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+      <span className="text-3xl font-bold block mb-6">
+        Lista Gastos x Unidad
       </span>
-      <button className="bg-red-500 rounded-2xl p-2 mt-2"> Add Pizza</button>
-      {/* ACA TERMINA EL COMPONENTE DE INGREDIENTES + ADD PIZZAS */}
-    </>
+
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-yellow-200 border-2 border-red-500 mb-4">
+          <thead>
+            <tr className="bg-red-500 text-white">
+              <th className="py-3 px-4 border-r">M.P</th>
+              <th className="py-3 px-4">Cost P.U</th>
+            </tr>
+          </thead>
+          <tbody>
+            {CostsList.map((p, index) => (
+              <tr key={index} className="bg-yellow-100 even:bg-yellow-200">
+                <td className="py-2 px-4 border-r">{p.name}</td>
+                <td className="py-2 px-4">${p.cost}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <button className="bg-red-500 hover:bg-red-600 text-white rounded-full px-6 py-3 mt-6 shadow-lg transition-all">
+        Add Cost
+      </button>
+
+      <h2 className="font-bold text-3xl mt-10 mb-6">Ingredientes</h2>
+      <h1 className="text-lg mb-4">
+        Soy una muzza por ahora, pero hay un seleccionador acá
+      </h1>
+
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-yellow-200 border-2 border-red-500 mb-4">
+          <thead>
+            <tr className="bg-red-500 text-white">
+              <th className="py-3 px-4 border-r">Ingredient</th>
+              <th className="py-3 px-4">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Pizzas[0].ingredients?.map((p, index) => (
+              <tr key={index} className="bg-yellow-100 even:bg-yellow-200">
+                <td className="py-2 px-4 border-r">{p.name}</td>
+                <td className="py-2 px-4">{p.amount}.u</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <span className="font-semibold block mt-6">COSTO TOTAL: ${value}</span>
+
+      <button className="bg-red-500 hover:bg-red-600 text-white rounded-full px-6 py-3 mt-6 shadow-lg transition-all">
+        Add Pizza
+      </button>
+    </div>
   );
 };
 
