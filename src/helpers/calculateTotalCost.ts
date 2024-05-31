@@ -6,7 +6,7 @@ export const calculateTotalCost = (product: Product): number => {
   for (const ingredient of product.ingredients) {
     const costItem = costList.find((item) => item.name === ingredient.name);
     if (costItem) {
-      totalCost += costItem.cost * ingredient.amount;
+      totalCost += costItem.cost * ingredient.price;
     }
   }
 
