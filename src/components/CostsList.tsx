@@ -30,7 +30,7 @@ const CostsList = () => {
             {ingredents.map((ingredent, index) => (
               <tr key={index} className="bg-yellow-100 even:bg-yellow-200">
                 <td className="py-2 px-4 border-r">{ingredent.name}</td>
-                <td className="py-2 px-4">{ingredent.price}.u</td>
+                <td className="py-2 px-4">${ingredent.price}</td>
               </tr>
             ))}
           </tbody>
